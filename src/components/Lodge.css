@@ -1,0 +1,20 @@
+.lodge{
+    background-image: linear-gradient(360deg, black -95%, var(--red));
+    border-radius: 10px;
+    flex-basis: 30%;
+    display: grid;
+    align-items: end;
+    min-width: 200px;
+    min-height: 300px;
+}
+.lodge_subtitle{
+    width: 50%;
+    margin-inline-start: .5rem;
+    margin-block-end: .5rem;
+    color: white;
+}
+@media screen and (width <= 768px){
+    .lodge{
+        flex-basis: 100%;
+    }
+}
