@@ -4,7 +4,11 @@ import Banner from "./components/Banner";
 import "./App.css";
 import LodgeGrid from "./components/LodgeGrid";
 import Main from './components/Main';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 
 function App() {
   return (
