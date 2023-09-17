@@ -11,6 +11,15 @@
     max-width: 100px;
     height: auto;
   }
+
+  .navbar a {
+    text-decoration: none;
+    color: var(--red);
+  }
+
+  .navbar a:hover{
+    text-decoration: underline;
+  }
   
   .navbar-links {
     display: flex; /* Affiche les éléments "Accueil" et "À propos" côte à côte */
