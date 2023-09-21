@@ -1,5 +1,5 @@
 import React from 'react'
-import './Lodge.css'
+import './Lodge.scss'
 import {Link} from "react-router-dom";
 
 function Lodge() {

@@ -1,21 +1,23 @@
 import React from "react";
-import "./Navbar.css";
-import {Link} from 'react-router-dom';
+import "./Navbar.scss";
+import {NavLink} from 'react-router-dom';
 import logo from '../assets/logo.png';
 
 function Navbar() {
   return (
     <nav className="navbar">
+      <NavLink to='/'>
       <div className="navbar-logo">
         <img src={logo} alt="Logo"/>
       </div>
+      </NavLink>
       <div className="navbar-links">
-        <Link to="/">
+        <NavLink to="/">
           <div>Accueil</div>
-        </Link>
-        <Link to="/about">
+        </NavLink>
+        <NavLink to="/about">
           <div>À propos</div>
-        </Link>
+        </NavLink>
       </div>
     </nav>
   );

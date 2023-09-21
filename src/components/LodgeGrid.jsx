@@ -1,5 +1,5 @@
 import React from 'react'
-import './LodgeGrid.css'
+import './LodgeGrid.scss'
 import Lodge from './Lodge.jsx'
 
 function LodgeGrid() {

@@ -1,3 +1,5 @@
+@use"../scss/variables" as *;
+
 .banner-container {
     position: relative;
     max-width: 100%;
@@ -5,7 +7,7 @@
     min-height: 150px;
     border-radius: 25px;
     overflow: hidden;
-    color: white;
+    color: $color-text-white;
     display: flex;
     align-items: center;
     justify-content: center;

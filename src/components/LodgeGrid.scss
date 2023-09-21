@@ -1,5 +1,7 @@
+@use"../scss/variables" as *;
+
 .grid{
-    background-color: #F6F6F6;
+    background-color: $grid-background-dark;
     min-height: 500px;
     display: flex;
     flex-wrap: wrap;
@@ -10,7 +12,7 @@
 @media screen and (width <= 768px) {
         .grid{
             justify-content: center;
-            background-color: white;
+            background-color: $grid-background-light;
             padding: 0;
         } 
 }

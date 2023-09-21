@@ -1,6 +1,8 @@
+@use"../scss/variables" as *;
+
 .footer{
-    background-color: black;
-    color: white;
+    background-color: $footer-background-color;
+    color: $color-text-white;
     padding: 20px;
     text-align: center;
     min-height: 100px;
