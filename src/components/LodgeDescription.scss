@@ -1,0 +1,29 @@
+@use"../scss/variables" as *;
+
+.lodge__description{
+    p {
+        margin-block: 0em;
+    }
+    .description__header{
+    background: var(--red);
+    color: $color-text-white;
+    padding: .2em 1em;
+    border-radius: .7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .chevron{
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    }
+    .description__content{
+        background-color: $background-light-grey;
+        color: var(--red);
+        padding: 1em;
+        position: relative;
+        top: -0.3rem;
+        z-index: -1;
+        border-radius: 0.7rem;
+    }
+}

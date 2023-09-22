@@ -3,6 +3,7 @@ import HomePage from '../pages/HomePage'
 import Footer from '../layout/Footer'
 import Navbar from '../components/Navbar'
 import Main from '../layout/Main'
+import LodgePage from '../pages/LodgePage'
 import {
   createBrowserRouter,
   Outlet,
@@ -29,7 +30,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/lodge",
-        element: <h1>Nos appartements</h1>,
+        element: <LodgePage/>,
       },
       {
         path: "/about",
