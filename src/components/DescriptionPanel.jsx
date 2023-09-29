@@ -1,11 +1,11 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
-import './LodgeDescription.scss'
+import './DescriptionPanel.scss'
 
-function LodgeDescription () {
+function DescriptionPanel () {
     return(
-    <div className="lodge__description">
+    <div className="description__panel">
         <p className="description__header">
             <span>Description</span>
             <FontAwesomeIcon icon={faChevronUp} className="chevron"/>
@@ -22,4 +22,4 @@ function LodgeDescription () {
     )
 }
 
-export default LodgeDescription
+export default DescriptionPanel

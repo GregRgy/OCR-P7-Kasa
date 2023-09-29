@@ -1,21 +1,18 @@
 import React from "react";
 import "./LodgePage.scss";
-import LodgeDescription from "../components/LodgeDescription";
-import LodgeBanner from "../components/LodgeBanner";
+import DescriptionPanel from "../components/DescriptionPanel";
 import LodgeHeader from "../components/LodgeHeader";
-
-
+import ImageBanner from "../components/ImageBanner";
 
 function LodgePage() {
   return (
     <div className="lodge-page">
-    <LodgeBanner/>
-      <LodgeHeader/>
+      <ImageBanner />
+      <LodgeHeader />
       <div className="lodge__description__area">
-      <LodgeDescription/>
-      <LodgeDescription/>
+        <DescriptionPanel />
+        <DescriptionPanel />
       </div>
-      
     </div>
   );
 }

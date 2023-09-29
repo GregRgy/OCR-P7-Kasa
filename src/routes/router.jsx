@@ -4,6 +4,9 @@ import Footer from '../layout/Footer'
 import Navbar from '../components/Navbar'
 import Main from '../layout/Main'
 import LodgePage from '../pages/LodgePage'
+import About from '../pages/About'
+import ErrorPageNotFound from '../pages/ErrorPageNotFound'
+
 import {
   createBrowserRouter,
   Outlet,
@@ -22,7 +25,7 @@ const HeaderFooterLayout =  () => {
 export const router = createBrowserRouter([
   {
     element: <HeaderFooterLayout/>,
-    errorElement: <h1>404 not found</h1>,    
+    errorElement: <ErrorPageNotFound/>,    
     children: [
       {
         path: "/",
@@ -34,7 +37,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <h1>À propos</h1>
+        element: <About/>
       },
     ],
   },

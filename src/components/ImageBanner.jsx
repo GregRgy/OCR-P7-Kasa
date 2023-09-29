@@ -1,9 +1,9 @@
 import React from 'react'
-import './LodgeBanner.scss'
+import './ImageBanner.scss'
 
-function LodgeBanner() {
+function ImageBanner() {
   return (
-    <div className='lodge__banner'>
+    <div className='image__banner'>
     <img
       src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg"
       alt=""
@@ -12,4 +12,4 @@ function LodgeBanner() {
   )
 }
 
-export default LodgeBanner
+export default ImageBanner

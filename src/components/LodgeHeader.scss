@@ -3,12 +3,27 @@
 .lodge__header{
     display: flex;
     margin-bottom: 1.5em;
+    gap: 1rem;
+    @media screen and (width <= 768px) {
+        flex-direction: column;
+    }
     .lodge__title{
         flex-grow: 1;
+    }
+    .lodge__owner{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @media screen and (width <= 768px) {
+            flex-direction: row;
+        }
     }
     .lodge__owner__details{
         display: flex;
         gap: .5rem;
+        @media screen and (width <= 768px) {
+            order: 1;
+        }
     }
     .lodge__owner__badge{
         height: 50px;

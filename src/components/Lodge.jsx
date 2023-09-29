@@ -6,7 +6,7 @@ function Lodge() {
   return (
     <div className='lodge'>
         <Link to="/lodge">
-        <div className='lodge_subtitle'>Titre de la location</div>
+          <div className='lodge_subtitle'>Titre de la location</div>
         </Link>
     </div>
   )
