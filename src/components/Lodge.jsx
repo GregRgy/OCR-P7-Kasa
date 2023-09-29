@@ -2,14 +2,16 @@ import React from 'react'
 import './Lodge.scss'
 import {Link} from "react-router-dom";
 
-function Lodge() {
+function Lodge(props) {
+  console.log("props:", props)
   return (
-    <div className='lodge'>
-        <Link to="/lodge">
-          <div className='lodge_subtitle'>Titre de la location</div>
-        </Link>
-    </div>
-  )
+    <Link>
+      <div className="lodge">
+        <img src={props.imageUrl} alt="" />
+        <div className="lodge__subtitle">{props.title}</div>
+      </div>
+    </Link>
+  );
 }
 
 export default Lodge
