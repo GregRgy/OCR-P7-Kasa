@@ -8,10 +8,10 @@ function About() {
     <>
         <ImageBanner/>
         <div className='about__container'>
-        <DescriptionPanel/>
-        <DescriptionPanel/>
-        <DescriptionPanel/>
-        <DescriptionPanel/>
+        <DescriptionPanel content="C'est très important" title="Fiabilité" />
+        <DescriptionPanel content="C'est très important" title="Respect" />
+        <DescriptionPanel content="C'est très important" title="Service" />
+        <DescriptionPanel content="C'est très important" title="Responsabilité" />
         </div>
     </>
   )

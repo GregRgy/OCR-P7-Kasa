@@ -3,6 +3,7 @@
 .description__panel{
     margin-bottom: 1em;
     flex-basis: 50%;
+    overflow: hidden;
     p {
         margin-block: 0em;
     }
@@ -17,10 +18,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .chevron{
+    .chevron {
         font-size: 2rem;
         cursor: pointer;
-    }
+        transition: transform 0.3s ease-in-out;
+      
+        &.rotate {
+          transform: rotate(180deg);
+        }
+      }
     }
     .description__content{
         background-color: $background-light-grey;
@@ -30,5 +36,12 @@
         top: -0.3rem;
         z-index: -1;
         border-radius: 0.7rem;
+        transition: transform 0.3s ease-in-out;
+        &.hidden {
+            transform: translateY(-100%);
+        }
+        &.visible{
+            transform: translateY(0);
+        }
     }
 }
