@@ -1,11 +1,12 @@
 import React from 'react'
-import './Lodge.scss'
+import './LodgeCard.scss'
 import {Link} from "react-router-dom";
 
 function Lodge(props) {
-  console.log("props:", props)
   return (
-    <Link>
+    <Link to="/lodge" state={{
+      lodgeId: props.id
+    }}>
       <div className="lodge">
         <img src={props.imageUrl} alt="" />
         <div className="lodge__subtitle">{props.title}</div>

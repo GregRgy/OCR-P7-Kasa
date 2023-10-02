@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./LodgeGrid.scss";
-import Lodge from "./Lodge.jsx";
+import Lodge from "./LodgeCard.jsx";
 
 function LodgeGrid() {
   const [lodges, setLodges] = useState([]);
 
-  useEffect(fetchLodges, []);
+  useEffect(fetchLodges, []); // useEffect, déclenchement du code lorsque le composant est chargé
 
   function fetchLodges() {
     fetch("logements.json")
@@ -17,7 +17,7 @@ function LodgeGrid() {
   return (
     <div className="grid">
       {lodges.map((lodge) => (
-      <Lodge title={lodge.title} imageUrl = {lodge.cover}/>
+      <Lodge title={lodge.title} imageUrl = {lodge.cover} id={lodge.id}/>
       ))}
     </div>
   );

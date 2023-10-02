@@ -13,19 +13,20 @@
     .lodge__owner{
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         @media screen and (width <= 768px) {
             flex-direction: row;
+            justify-content: space-between;
         }
     }
     .lodge__owner__details{
         display: flex;
         gap: .5rem;
+        margin-bottom: .5em;
         @media screen and (width <= 768px) {
             order: 1;
         }
     }
-    .lodge__owner__badge{
+    .lodge__owner__badge img{
         height: 50px;
         width: 50px;
         border-radius: 50%;
@@ -34,14 +35,12 @@
     .lodge__owner__stars{
         display: flex;
         gap: .2rem;
+        color: $background-grey;
         * {
             font-size: 1.5rem;
         }
         .on {
             color: var(--red);
-        }
-        .off{
-            color: $background-grey;
         }
     }
     h3{
