@@ -25,12 +25,12 @@ if(lodge == null) return <div>Loading...</div>;
 
   return (
     <div className="lodge-page">
-      <ImageBanner imageUrl={lodge.cover}/>
+      <ImageBanner pictures={lodge.pictures}/>
       <LodgeHeader lodge={lodge}/>
       <div className="lodge__description__area">
         <DescriptionPanel title="Description" content={lodge.description} />
-        <DescriptionPanel title="Equipements" content={lodge.equipments.map((eq) => (
-          <li>{eq}</li>
+        <DescriptionPanel title="Equipements" content={lodge.equipments.map((eq, i) => (
+          <li key={i}>{eq}</li>
         ))} />
       </div>
     </div>
