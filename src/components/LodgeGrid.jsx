@@ -17,7 +17,7 @@ function LodgeGrid() {
   return (
     <div className="grid">
       {lodges.map((lodge) => (
-      <Lodge title={lodge.title} imageUrl = {lodge.cover} id={lodge.id}/>
+      <Lodge title={lodge.title} imageUrl = {lodge.cover} id={lodge.id} key={lodge.id}/>
       ))}
     </div>
   );

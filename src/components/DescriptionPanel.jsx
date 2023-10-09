@@ -4,14 +4,14 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "./DescriptionPanel.scss";
 
 function DescriptionPanel(props) {
-  const [isContentVisible, setIsContentVisible] = useState(false);
+  const [isContentVisible, setIsContentVisible] = useState(true);
   const showContent = () => {
     setIsContentVisible(!isContentVisible);
   };
   const contentClass =
     (isContentVisible ? "visible" : "hidden") + " description__content";
   return (
-    <div className="description__panel">
+    <div className={`description__panel ${isContentVisible ? '' : 'collapsed'}`} onClick={showContent}>
       <p className="description__header">
         <span>{props.title}</span>
         <FontAwesomeIcon
