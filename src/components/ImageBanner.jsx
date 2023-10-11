@@ -49,6 +49,7 @@ const arePicturesAvailable = () => {
       {arePicturesAvailable() && (
       <>
         <FontAwesomeIcon className="btn-previous" icon={faChevronDown} onClick={moveToPrevious} />
+        <span className="slide__counter">{currentPicture + 1} / {pictures.length}</span>
         <FontAwesomeIcon className="btn-next" icon={faChevronDown} onClick={moveToNext} />
       </>
       )}
