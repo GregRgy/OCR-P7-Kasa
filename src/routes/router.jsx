@@ -32,8 +32,8 @@ export const router = createBrowserRouter([
         element: <HomePage/>
       },
       {
-        path: "/lodge",
-        element: <LodgePage/>,
+        path: "/lodge/:lodgeId",
+        element: <LodgePage/>
       },
       {
         path: "/about",

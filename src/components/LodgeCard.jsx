@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 function Lodge(props) {
   return (
-    <Link to="/lodge" state={{
+    <Link to={`/lodge/${props.id}`} state={{
       lodgeId: props.id
     }}>
       <div className="lodge">

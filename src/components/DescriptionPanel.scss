@@ -1,48 +1,52 @@
 @use"../scss/variables" as *;
 
-.description__panel{
-    margin-bottom: 1em;
-    flex-basis: 50%;
+.description__panel {
     overflow: hidden;
     cursor: pointer;
-    p {
-        margin-block: 0em;
-    }
-    li {
-        margin-right: .5em;
-    }
-    .description__header{
-    background: var(--red);
-    color: $color-text-white;
-    padding: .2em 1em;
-    border-radius: .7rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .chevron {
+  
+    .description__header {
+      background: var(--red);
+      color: $color-text-white;
+      padding: 0.2em 1em;
+      border-radius: 0.7rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      .chevron {
         font-size: 2rem;
         cursor: pointer;
         transition: transform 0.3s ease-in-out;
-      
+  
         &.rotate {
           transform: rotate(180deg);
         }
       }
     }
-    .description__content{
-        background-color: $background-light-grey;
-        color: var(--red);
-        padding: 1em 1em 1em 1.5em;
-        position: relative;
-        top: -0.3rem;
-        z-index: -1;
-        border-radius: 0.7rem;
-        transition: transform 0.3s ease-in-out;
-        &.hidden {
-            transform: translateY(-100%);
-        }
-        &.visible{
-            transform: translateY(0);
-        }
+  
+    .description__content {
+      background-color: $background-light-grey;
+      color: var(--red);
+      padding: 1em 1.5em;
+      margin-bottom: 1em;
+      position: relative;
+      top: -0.3rem;
+      z-index: -1;
+      border-radius: 0.7rem;
+      transition: transform 0.3s ease-in-out;
+      display: block; /* Afficher le contenu par défaut */
+  
+      &.hidden {
+        transform: translateY(-100%);
+        display: none; /* Cacher le contenu lorsque le panneau est replié */
+      }
     }
-}
+  
+    &.collapsed {
+      margin-bottom: 2em;
+    }
+  }
+  
+  
+  
+  

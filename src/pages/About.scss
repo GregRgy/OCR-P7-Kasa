@@ -1,13 +1,9 @@
-
-
 .about__container {
-    padding-inline: 3rem;
-  
-    .description__panel {
-  
-      &.collapsed {
-        margin-bottom: -3em; // Réduire la marge lorsque le panneau est replié
-      }
-    }
+  padding-inline: 3rem;
+}
+
+@media (max-width: 768px) {
+  .about__container {
+    padding-inline: 1rem; /* Réduire le padding lorsque l'écran est plus petit */
   }
-  
+}

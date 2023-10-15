@@ -10,17 +10,19 @@ function DescriptionPanel(props) {
   };
   const contentClass =
     (isContentVisible ? "visible" : "hidden") + " description__content";
+  const dropdownClass = isContentVisible ? '' : 'collapsed'; // Ajout de la classe "collapsed" pour le dropdown
+
   return (
-    <div className={`description__panel ${isContentVisible ? '' : 'collapsed'}`} onClick={showContent}>
-      <p className="description__header">
+    <div className={`description__panel ${dropdownClass}`} onClick={showContent}>
+      <div className="description__header">
         <span>{props.title}</span>
         <FontAwesomeIcon
           icon={faChevronDown}
           className={`chevron ${isContentVisible ? "rotate" : ""}`}
           onClick={showContent}
         />
-      </p>
-      <p className={contentClass}>{props.content}</p>
+      </div>
+      <div className={`dropdown-content ${contentClass}`}>{props.content}</div> 
     </div>
   );
 }
