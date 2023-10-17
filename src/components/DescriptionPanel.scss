@@ -34,8 +34,7 @@
       z-index: -1;
       border-radius: 0.7rem;
       transition: transform 0.3s ease-in-out;
-      display: block; /* Afficher le contenu par défaut */
-  
+      display: block; 
       &.hidden {
         transform: translateY(-100%);
         display: none; /* Cacher le contenu lorsque le panneau est replié */

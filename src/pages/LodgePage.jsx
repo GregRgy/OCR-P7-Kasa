@@ -1,23 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import "./LodgePage.scss";
-import DescriptionPanel from "../components/DescriptionPanel";
-import LodgeHeader from "../components/LodgeHeader";
-import ImageBanner from "../components/ImageBanner";
-import { useParams } from "react-router-dom";
-import lodges from "../logements.json";
+import { useParams, useNavigate } from 'react-router-dom';
+import './LodgePage.scss';
+import DescriptionPanel from '../components/DescriptionPanel';
+import LodgeHeader from '../components/LodgeHeader';
+import ImageBanner from '../components/ImageBanner';
+import lodges from '../logements.json';
 
 function LodgePage() {
   const { lodgeId } = useParams();
   const [lodge, setLodge] = useState(null);
+  const navigate = useNavigate(); // fonction de navigation
 
   useEffect(() => {
     const foundLodge = lodges.find((l) => l.id === lodgeId);
     if (foundLodge) {
       setLodge(foundLodge);
+    } else {
+      navigate('/error'); // Redirige vers la page d'erreur si l'ID n'est pas valide
     }
-  }, [lodgeId]); // useEffect s'exécute lorsque lodgeId change
+  }, [lodgeId, navigate]);
 
-  if (lodge === null) return <div>Loading...</div>;
+  if (lodge === null) {
+    return <div>Loading...</div>; 
+  }
 
   return (
     <div className="lodge-page">
@@ -25,9 +30,14 @@ function LodgePage() {
       <LodgeHeader lodge={lodge} />
       <div className="lodge__description__area">
         <DescriptionPanel title="Description" content={lodge.description} />
-        <DescriptionPanel title="Equipements" content={lodge.equipments.map((eq, i) => (
-          <li key={i} className="equipments">{eq}</li>
-        ))} />
+        <DescriptionPanel
+          title="Equipements"
+          content={lodge.equipments.map((eq, i) => (
+            <div key={i} className="equipments">
+              {eq}
+            </div>
+          ))}
+        />
       </div>
     </div>
   );

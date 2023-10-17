@@ -4,7 +4,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "./DescriptionPanel.scss";
 
 function DescriptionPanel(props) {
-  const [isContentVisible, setIsContentVisible] = useState(true);
+  const [isContentVisible, setIsContentVisible] = useState(false); 
   const showContent = () => {
     setIsContentVisible(!isContentVisible);
   };
